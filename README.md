@@ -10,4 +10,10 @@ Como este PDF no permite una lectura correcta se usa el script _pdftotext_ que p
 pdftotext -layout LugaresDeVotacion-elecciones-2017.pdf carta-marina-cordoba-2017.txt
 # notese el -layout, es clave
 ```
+Luego este texto se convierte a CSV vía:  
 
+```
+python3 carta-marina-process.py
+```
+Este script esta adaptado de [uno similar hecho en 2015](https://github.com/OpenDataCordoba/elecciones2015/blob/master/resources/carta-marina/CartaMarinaProcess.py).  
+La Carta Marina no es muy precisa en el orden de las escuelas y es posible.  
