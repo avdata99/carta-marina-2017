@@ -270,7 +270,7 @@ Resúmen del Circuito: Cantidad de Establecimientos:             3          24  
 ESC DE COMERCIO J J PASO - PLATON       B°LOS PARAISOS 3.030               10    01052 a 01061             3.440
 COLEGIO FERMIN LAFITTE - FCO VALLE 2.443                                   10    01062 a 01071             3.440
 ESC JUVENILIA - ZARATE   - 2.083                                            7    01072 a 01078             2.408
-ESC PCIA    DE MISIONES - FIRPO 2.254                                      14    01079 a 01092             4.810
+ESC PCIA DE MISIONES - FIRPO 2.254                                      14    01079 a 01092             4.810
 Resúmen del Circuito: Cantidad de Establecimientos:             4          41                             14.098
 
  Circuito     9D - POETA LUGONES                                    Cant Mesas   Mesas desde / hasta Cant Electores

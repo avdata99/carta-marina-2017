@@ -16,4 +16,6 @@ Luego este texto se convierte a CSV vía:
 python3 carta-marina-process.py
 ```
 Este script esta adaptado de [uno similar hecho en 2015](https://github.com/OpenDataCordoba/elecciones2015/blob/master/resources/carta-marina/CartaMarinaProcess.py).  
-La Carta Marina no es muy precisa en el orden de las escuelas y es posible.  
+La Carta Marina no es muy precisa en el orden de las escuelas y es posible que requiera toques a mano.  
+Muchas direcciones tienen formas complicadas por lo que el retoque final a mano puede ser necesario. La detección de barrios (muchas veces metido entre la calle y el numero (?)) podría hacerce con expresiones regulares y simplificar este proceso.  
+  

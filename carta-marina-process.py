@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import sys
+import csv
 
 path='carta-marina-cordoba-2017.txt'
 
@@ -79,9 +81,22 @@ for r in lines:
         if len(p2) < 4:
             print('linea muy corta {}'.format(r))
             continue
-        
-        print("%d -- %s" % (cnt, str(p2)))
+        # print('ESCUELA PELADA: {}'.format(r))
         escuela = p2[0]
+        p3 = escuela.split(' - ')
+        direccion = ''
+        barrio = ''
+        if len(p3) == 2:
+            escuela = p3[0]
+            direccion = p3[1]
+        elif len(p3) == 3:
+            escuela = p3[0]
+            direccion = p3[1]
+            barrio = p3[2]
+        elif len(p3) > 3:
+            print('Linea {} no comprendida, corregir: {}'.format(cnt, r))
+            sys.exit(1)
+        
         if not p2[1].strip().isnumeric(): # viene el barrio algunas veces
             escuela = '{} - {}'.format(p2[0], p2[1])
             del p2[1]
@@ -93,27 +108,29 @@ for r in lines:
             mesa_desde = 6339
         if mesa_desde != 6001 and mesa_desde != last_mesa + 1:
             print("Mesa invalida %d %d" % (mesa_desde, last_mesa))
-            exit(1)
+            sys.exit(1)
         mesa_hasta = int(p2[2].split(' a ')[1])
         last_mesa = mesa_hasta
         cant_electores = int(p2[3].replace('.', ''))
-        print("Escuela %s. %d mesas. Desde %d a %d. %d electores" % (escuela, cant_mesas, mesa_desde, mesa_hasta, cant_electores))
+        # print("Escuela %s. %d mesas. Desde %d a %d. %d electores" % (escuela, cant_mesas, mesa_desde, mesa_hasta, cant_electores))
         elem = {'seccion_nro': seccion_nro,
                 'seccion_name': seccion_name,
                 'circuito_nro': circuito_nro,
                 'circuito_name': circuito_name,
                 'escuela': escuela.replace(',', '.'),
+                'direccion': direccion,
+                'barrio': barrio,
                 'cant_mesas': cant_mesas,
                 'desde': mesa_desde, 'hasta': mesa_hasta,
                 'electores': cant_electores}
+        # print(elem)
         escuelas.append(elem)
         
 print("Escuelas: %d" % len(escuelas))
 
-import csv
 
 with open('escuelas-elecciones-2017-cordoba.csv', 'w') as csvfile:
-    fieldnames = ['escuela', 'seccion_nro', 'seccion_name', 'circuito_nro',
+    fieldnames = ['escuela', 'direccion', 'barrio', 'seccion_nro', 'seccion_name', 'circuito_nro',
                     'circuito_name', 'cant_mesas', 'desde', 'hasta',
                     'electores']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
