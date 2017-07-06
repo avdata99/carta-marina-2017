@@ -30,3 +30,8 @@ Con esos datos junto a los de 2015 se armó una lista de variaciones de electore
 [CSV variación por circuitos](Electores-2017-vs-2015-por-Circuitos.csv).  
 
 
+### Mapa variación de departamentos
+
+![Crecimiento-padrones-por-departamentos](img/Crecimiento-padrones-por-departamentos.png)
+
+[VER MAPA](https://hudson.carto.com/builder/bbae0c77-1d33-40e3-b8c0-4876df33a4c4/embed)
