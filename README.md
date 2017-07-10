@@ -21,6 +21,9 @@ Muchas direcciones tienen formas complicadas por lo que el retoque final a mano 
 Dentro de google sheets se geolocalizaron las escuelas con [este script](https://github.com/ModernizacionMuniCBA/muni-google-util-app-scripts/tree/master/geolocalizar%20desde%20direccion) liberado desde la Municipalidad de Córdoba.  
 
 Con esta geolocalización quedo disponible [un CSV](res/escuelas-elecciones-2017-cordoba-Geolocalizada.csv).  
+De aquí puede hacerse un [mapa](https://hudson.carto.com/builder/830a70f8-82b0-4834-8410-81d0ebc44064/embed).  
+
+![Escuelas geo](imag/Escuelas-geo.png)
 
 Con esos datos junto a los de 2015 se armó una lista de variaciones de electores por sección (departamento) y por circuito (generalmente ciudades).  
 
